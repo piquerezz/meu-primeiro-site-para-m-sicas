@@ -1,44 +1,19 @@
 /* ========================================
-   🐆 VIBE ONÇA - Fundo Pele de Onça
+   🐆 VIBE ONÇA - Fundo com Imagem
    Site da Alexia - Playlist Musical
    ======================================== */
 
-/* ---------- FUNDO COM PELE DE ONÇA ---------- */
+/* ---------- FUNDO COM A IMAGEM DA ONÇA ---------- */
 body {
-    background-color: #1a0a00;
+    background-image: url('https://i.pinimg.com/originals/8c/c6/93/8cc6931511747deca7f252e4e78a1db7.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
     font-family: 'Arial Black', Impact, sans-serif;
     padding: 20px;
     min-height: 100vh;
     margin: 0;
-    
-    /* ===== PELE DE ONÇA FEITA EM CSS ===== */
-    /* Manchas grandes (tipo as da onça) */
-    background-image: 
-        radial-gradient(ellipse at 10% 15%, #ff8c00 0%, transparent 35%),
-        radial-gradient(ellipse at 75% 20%, #cc7700 0%, transparent 30%),
-        radial-gradient(ellipse at 25% 55%, #ffa500 0%, transparent 40%),
-        radial-gradient(ellipse at 85% 60%, #b36b00 0%, transparent 35%),
-        radial-gradient(ellipse at 50% 85%, #e68a00 0%, transparent 30%),
-        radial-gradient(ellipse at 15% 90%, #d98000 0%, transparent 25%),
-        
-        /* Manchas médias (rosetas da onça) */
-        radial-gradient(circle at 30% 25%, #ff9933 0%, transparent 18%),
-        radial-gradient(circle at 65% 45%, #cc7a00 0%, transparent 20%),
-        radial-gradient(circle at 40% 70%, #ff8800 0%, transparent 15%),
-        radial-gradient(circle at 70% 80%, #bb7700 0%, transparent 22%),
-        radial-gradient(circle at 20% 45%, #ee8800 0%, transparent 16%),
-        radial-gradient(circle at 55% 15%, #dd7700 0%, transparent 20%),
-        radial-gradient(circle at 80% 35%, #cc8800 0%, transparent 18%),
-        radial-gradient(circle at 45% 45%, #ff9900 0%, transparent 14%),
-        
-        /* Manchas pequenas (pintinhas) */
-        radial-gradient(circle at 15% 30%, #ffaa33 0%, transparent 8%),
-        radial-gradient(circle at 50% 50%, #dd8800 0%, transparent 10%),
-        radial-gradient(circle at 85% 70%, #cc9900 0%, transparent 9%),
-        radial-gradient(circle at 35% 85%, #ff8800 0%, transparent 7%),
-        radial-gradient(circle at 60% 35%, #ee9900 0%, transparent 10%),
-        radial-gradient(circle at 10% 60%, #bb8800 0%, transparent 8%),
-        radial-gradient(circle at 90% 15%, #cc8800 0%, transparent 9%);
 }
 
 /* ---------- ONÇAS DOS CANTOS ---------- */
@@ -78,29 +53,24 @@ body {
     }
 }
 
-/* ---------- TÍTULOS (SEM EMOJIS) ---------- */
+/* ---------- TÍTULOS ---------- */
 h1 {
     color: #ff8c00;
     font-size: 55px;
     text-align: center;
     font-family: 'Arial Black', Impact, sans-serif;
-    
-    /* Sombra com brilho laranja */
     text-shadow: 
         0 0 20px rgba(255, 140, 0, 0.6),
         0 0 40px rgba(255, 100, 0, 0.3),
         0 4px 8px rgba(0, 0, 0, 0.8);
-    
-    /* Fundo do título com degrade preto/marrom */
-    background: linear-gradient(to right, #1a0a00, #3d2000, #1a0a00);
+    background: rgba(0, 0, 0, 0.7);
     padding: 20px 30px;
     border-radius: 20px;
     border: 3px solid #ff8c00;
     margin: 20px 0;
     letter-spacing: 3px;
-    
-    /* Deixa o título levemente inclinado */
     transform: skew(-2deg);
+    backdrop-filter: blur(5px);
 }
 
 /* ---------- VÍDEOS ---------- */
@@ -111,16 +81,12 @@ iframe {
     height: 450px;
     border-radius: 20px;
     border: 4px solid #ff8c00;
-    
-    /* Sombra que parece luz de fogueira */
     box-shadow: 
         0 0 30px rgba(255, 140, 0, 0.3),
         inset 0 0 30px rgba(255, 100, 0, 0.1);
-    
     background-color: #000;
 }
 
-/* Efeito quando passa o mouse */
 iframe:hover {
     transform: scale(1.03) rotate(-1deg);
     box-shadow: 0 0 60px rgba(255, 140, 0, 0.6);
