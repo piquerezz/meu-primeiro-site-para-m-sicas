@@ -1,15 +1,47 @@
-<div class="onca-esquerda">
-    <img src="onca.png" alt="Onça" width="150">
-</div>
-<div class="onca-direita">
-    <img src="onca.png" alt="Onça" width="150">
-</div>
+/* ========================================
+   🐆 VIBE ONÇA - Site da Alexia
+   ======================================== */
+
+/* ---------- FUNDO COM MANCHAS DE ONÇA ---------- */
+body {
+    background-color: #1a0a00;
+    font-family: 'Arial Black', Impact, sans-serif;
+    padding: 20px;
+    min-height: 100vh;
+    margin: 0;
+    
+    /* Manchas de onça feitas com CSS puro!
+       Parece a pele da onça, sem precisar de imagens */
+    background-image: 
+        /* Manchas grandes */
+        radial-gradient(ellipse at 10% 20%, rgba(255, 140, 0, 0.25) 0%, transparent 40%),
+        radial-gradient(ellipse at 85% 30%, rgba(200, 100, 0, 0.20) 0%, transparent 35%),
+        radial-gradient(ellipse at 15% 70%, rgba(255, 180, 0, 0.20) 0%, transparent 30%),
+        radial-gradient(ellipse at 90% 75%, rgba(180, 80, 0, 0.25) 0%, transparent 40%),
+        radial-gradient(ellipse at 50% 50%, rgba(255, 150, 0, 0.15) 0%, transparent 50%),
+        /* Manchas médias */
+        radial-gradient(circle at 25% 40%, rgba(200, 120, 0, 0.20) 0%, transparent 20%),
+        radial-gradient(circle at 75% 60%, rgba(220, 130, 0, 0.18) 0%, transparent 25%),
+        radial-gradient(circle at 40% 80%, rgba(180, 100, 0, 0.18) 0%, transparent 20%),
+        radial-gradient(circle at 60% 20%, rgba(200, 140, 0, 0.15) 0%, transparent 25%),
+        /* Manchas pequenas (pintinhas!) */
+        radial-gradient(circle at 30% 15%, rgba(255, 160, 0, 0.25) 0%, transparent 10%),
+        radial-gradient(circle at 70% 85%, rgba(200, 120, 0, 0.20) 0%, transparent 10%),
+        radial-gradient(circle at 45% 55%, rgba(255, 180, 0, 0.18) 0%, transparent 8%),
+        radial-gradient(circle at 55% 35%, rgba(180, 100, 0, 0.18) 0%, transparent 12%),
+        radial-gradient(circle at 20% 90%, rgba(200, 140, 0, 0.15) 0%, transparent 15%),
+        radial-gradient(circle at 80% 10%, rgba(220, 150, 0, 0.18) 0%, transparent 15%);
+}
+
+/* ---------- ONÇAS DOS CANTOS (EMOJIS) ---------- */
 .onca-esquerda {
     position: fixed;
     left: 15px;
     top: 50%;
     transform: translateY(-50%);
+    font-size: 120px;
     z-index: 100;
+    animation: pulse-onca 2.5s ease-in-out infinite;
 }
 
 .onca-direita {
@@ -17,5 +49,88 @@
     right: 15px;
     top: 50%;
     transform: translateY(-50%);
+    font-size: 120px;
     z-index: 100;
+    animation: pulse-onca 2.5s ease-in-out infinite;
+    animation-delay: 0.8s;
+}
+
+/* Animação: a onça "respira" e se mexe igual uma de verdade! */
+@keyframes pulse-onca {
+    0% { 
+        transform: translateY(-50%) scale(1) rotate(0deg); 
+    }
+    50% { 
+        transform: translateY(-50%) scale(1.1) rotate(3deg); 
+    }
+    100% { 
+        transform: translateY(-50%) scale(1) rotate(0deg); 
+    }
+}
+
+/* ---------- TÍTULOS (SEM EMOJIS, SÓ LETRAS) ---------- */
+h1 {
+    color: #ff8c00;  /* Laranja vibrante */
+    font-size: 55px;
+    text-align: center;
+    font-family: 'Arial Black', Impact, sans-serif;
+    
+    /* Sombra com brilho laranja - igual olhos de onça! */
+    text-shadow: 
+        0 0 20px rgba(255, 140, 0, 0.6),
+        0 0 40px rgba(255, 100, 0, 0.3),
+        0 4px 8px rgba(0, 0, 0, 0.8);
+    
+    /* Fundo do título com degrade preto/marrom */
+    background: linear-gradient(to right, #1a0a00, #3d2000, #1a0a00);
+    padding: 20px 30px;
+    border-radius: 20px;
+    border: 3px solid #ff8c00;  /* Borda laranja */
+    margin: 20px 0;
+    letter-spacing: 3px;  /* Letras mais espaçadas */
+    
+    /* Deixa o título levemente inclinado - igual onça atenta! */
+    transform: skew(-2deg);
+}
+
+/* ---------- VÍDEOS (COM ESTILO ONÇA) ---------- */
+iframe {
+    display: block;
+    margin: 30px auto;
+    width: 800px;
+    height: 450px;
+    border-radius: 20px;
+    border: 4px solid #ff8c00;  /* Borda laranja */
+    
+    /* Sombra que parece luz de fogueira na floresta */
+    box-shadow: 
+        0 0 30px rgba(255, 140, 0, 0.3),
+        inset 0 0 30px rgba(255, 100, 0, 0.1);
+    
+    background-color: #000;
+}
+
+/* Efeito quando passa o mouse: a onça se move! */
+iframe:hover {
+    transform: scale(1.03) rotate(-1deg);
+    box-shadow: 0 0 60px rgba(255, 140, 0, 0.6);
+    transition: 0.4s ease;
+}
+
+/* ---------- AJUSTES PARA TELAS MENORES (CELULAR) ---------- */
+@media (max-width: 850px) {
+    iframe {
+        width: 95%;
+        height: auto;
+        aspect-ratio: 16/9;
+    }
+    
+    h1 {
+        font-size: 35px;
+        padding: 15px;
+    }
+    
+    .onca-esquerda, .onca-direita {
+        font-size: 60px;
+    }
 }
